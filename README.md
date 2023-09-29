@@ -1,40 +1,42 @@
-# EasyPrompter
+# BlazePrompter
 
-一个轻量级的软件提词器
+Windows上的轻量级软件提词器
 
 ## 如何使用
 
-在Releases中下载EasyPrompterBuild.7z，解压后得到EasyPrompterBuild文件夹，双击里面的EasyPrompter-<版本>.exe即可
+在Releases中下载BlazePrompterBuild.7z，解压后得BlazePrompterBuild文件夹，双击里BlazePrompter-<版本>.exe即可。若提示缺少DLL，请运行文件夹下的VC_redist.x86.exe。
 
-若使用PDF插件时长时间白屏，请运行文件夹下的MicrosoftEdgeWebview2Setup.exe（需要网络连接）
+若PrompterEdge插件启动后无反应（长时间白屏），请运行文件夹下的MicrosoftEdgeWebview2Setup.exe（需要网络连接）
+
+注：BlazePrompter不支持Windows 7及更低版本的Windows系统
 
 ## 如何编译
 
-1. 下载并安装[易语言](http://dywt.com.cn/pdown.htm)（建议5.93版本），推荐使用正版
+1. 下载并安装[易语言](http://dywt.com.cn/pdown.htm)（建议5.95版本），推荐使用正版
 
-2. （可选）下载并安装[易IDE视觉库](https://bbs.125.la/thread-14672340-1-1.html)，并启用助手中的“智能编译”插件，启用插件的“手动执行静态编译后执行下方配置”、“优化编译程序”、“突破内存限制”，并在“编译后执行命令行”中填入`{p}upx.exe --lzma {f}{h}`（可选） 
+2. 下载并配置好[VC2017静态编译链接器](https://d.125.la/thread-317-1-1.html)
 
-3. 下载并配置好[静态编译链接器](https://bbs.125.la/thread-25-1-1.html)（推荐使用VC6链接器）
-
-4. clone本仓库到本地（需要安装Git）
+3. clone本仓库到本地（需要安装Git）
    
-   GitHub源：`git clone https://github.com/SBLZsoft/EasyPrompter.git`
+   GitHub源：`git clone https://github.com/SBLZsoft/BlazePrompter.git`
    
-   GitLab源：`git clone https://gitlab.com/SBLZsoft/EasyPrompter.git`
+   GitLab源：`git clone https://gitlab.com/SBLZsoft/BlazePrompter.git`
 
-5. 解压项目根目录中的module.7z，得到modules文件夹
+4. 解压项目根目录中的module.7z，得到module文件夹
+
+5. 安装module文件夹中的编码转换支持库Ex、多线程支持库Ex、拖放支持库Ex
 
 6. （如您要编译PDF插件）将module文件夹中的WebView2_Caller.dll移到项目的根目录中
 
-7. 打开项目文件（如提示缺少模块，请在moudle文件夹中寻找到对应的模块）
+7. 打开项目文件（如提示缺少模块，请在module文件夹中寻找到对应的模块）
    
    对应的文件名：
    
-   EasyPrompter本体：EasyPrompter.e
+   BlazePrompter本体BlazePrompter.e
    
-   PDF插件：EasyPrompter-PDFPlugin.e
+   PrompterEdge插件：BlazePrompterEdgePlugin.e
    
-   屏幕标注插件非我方开发，您可到[Ink-Canvas仓库](https://github.com/WXRIW/Ink-Canvas)中了解详情
+   Ink-Canvas插件非我方开发，您可到[Ink-Canvas仓库](https://github.com/WXRIW/Ink-Canvas)中了解详情
 
 8. 点击菜单栏上的编译-静态编译，选择要将编译出来的程序保存到的目录
 
@@ -42,19 +44,13 @@
 
 Issues、Discussion请到GitHub中提出
 
-Merge Requests请到GitLab中提出，我们不接受GitHub的Pull Requests
-
-注意：对GitHub平台的代码所做的任何更改都将在与GitLab仓库下一次同步时被清空！
+由于易语言源代码的特殊性，您的Merge Requests / Pull Requests将在审核后手动合并
 
 ## 版权信息
 
-### 关于EasyPrompter
+### 关于BlazePrompter
 
-EasyPrompter 是自由软件, 在 AGPLv3 开源协议下发布, 同时附有附加条款.
-
-附加条款 (依据 AGPLv3 开源协议第七条)
-1.当您分发该程序的修改版本时, 您必须以一种合理的方式修改该程序的名称或版本号, 以示其与原始版本不同. (依据 AGPLv3, 7(c))
-2.您不得移除该程序所显示的版权声明. (依据 AGPLv3, 7(b))
+BlazePrompter 是自由软件, 在 AGPLv3 开源协议下发布, 同时附有附加条款.
 
     Copyright (C) 2020-2023 Soul-Blaze rod Studios.
     
@@ -70,6 +66,10 @@ EasyPrompter 是自由软件, 在 AGPLv3 开源协议下发布, 同时附有附�
     
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+附加条款 (依据 AGPLv3 开源协议第七条)
+1.当您分发该程序的修改版本时, 您必须以一种合理的方式修改该程序的名称或版本号, 以示其与原始版本不同. (依据 AGPLv3, 7(c))
+2.您不得移除该程序所显示的版权声明. (依据 AGPLv3, 7(b))
 
 ### 第三方组件
 
