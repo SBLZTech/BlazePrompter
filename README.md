@@ -4,11 +4,11 @@ Windows上的轻量级软件提词器
 
 ## 如何使用
 
-在Releases中下载BlazePrompterBuild.7z，解压后得BlazePrompterBuild文件夹，双击里BlazePrompter-<版本>.exe即可。若提示缺少DLL，请运行文件夹下的VC_redist.x86.exe。
+在Releases中下载BlazePrompterBuild.7z，解压后得BlazePrompterBuild文件夹，双击里BlazePrompter-<版本>.exe即可。
 
-若PrompterEdge插件启动后无反应（长时间白屏），请运行文件夹下的MicrosoftEdgeWebview2Setup.exe（需要网络连接）
+若提示缺少DLL或PrompterEdge插件启动后无反应（长时间白屏），请下载runtime.7z，解压后运行文件夹下的VC_redist.x86.exe与MicrosoftEdgeWebview2Setup.exe（需要网络连接）
 
-注：BlazePrompter不支持Windows 7及更低版本的Windows系统
+注：BlazePrompter不支持Windows 10以下版本的Windows系统
 
 ## 如何编译
 
